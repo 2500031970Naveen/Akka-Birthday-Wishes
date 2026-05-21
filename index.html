@@ -3,31 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sister Birthday Reel Login</title>
+  <title>Bhavani's Birthday Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <div class="login-card">
+  <audio id="birthdayMusic" preload="auto" loop>
+    <source src="bgm/The%20Love%20Bug%20Has%20Bitten%20%20%20Remo%20%20%20Siva%20Karthikeyan%20%20Keerthy%20Suresh%20%20Love%20Bgm%20%20%204k%20%23love%20%23.mp3" type="audio/mpeg" />
+  </audio>
+
+  <canvas id="skyCanvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="login-card" id="loginCard" aria-labelledby="loginTitle">
+      <div class="halo-ring" aria-hidden="true"></div>
       <div class="brand">
-        <div class="brand-icon">✨</div>
-        <h1>Birthday Reel</h1>
-        <p>Enter your name and unlock the tribute.</p>
+        <div class="brand-icon" aria-hidden="true">B</div>
+        <p class="eyebrow">Private birthday portal ✨</p>
+        <h1 id="loginTitle">A surprise made only for Akka 💖</h1>
+        <p>Enter the secret details and unlock a little universe built for your smile 🌙</p>
       </div>
 
       <form id="loginForm" class="login-form">
         <label for="username">Your Name</label>
-        <input id="username" name="username" type="text" placeholder="Sister's name" required />
+        <input id="username" name="username" type="text" autocomplete="name" required />
 
-        <label for="password">Passcode</label>
-        <input id="password" name="password" type="password" placeholder="Enter passcode" required />
+        <label for="password">Birthday Passcode</label>
+        <input id="password" name="password" type="password" required />
 
-        <button type="submit">Join the celebration</button>
+        <button type="submit">
+          <span>Unlock the surprise 🎁</span>
+          <span aria-hidden="true">-></span>
+        </button>
       </form>
 
-      <div class="message" id="message"></div>
-    </div>
-  </div>
+      <div class="message" id="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="wish-card hidden" id="wishCard" aria-labelledby="wishTitle">
+      <div class="wish-glow" aria-hidden="true"></div>
+      <div class="orbit orbit-one" aria-hidden="true"></div>
+      <div class="orbit orbit-two" aria-hidden="true"></div>
+
+      <div class="wish-content">
+        <div class="journey-top">
+          <p class="wish-meta" id="stepMeta">Chapter 1 of 5</p>
+          <div class="step-dots" id="stepDots" aria-label="Birthday journey progress"></div>
+        </div>
+
+        <div class="journey-stage" id="journeyStage" aria-live="polite"></div>
+
+        <div class="journey-controls">
+          <button class="ghost-button" id="prevButton" type="button">Back 💫</button>
+          <button class="reveal-button" id="nextButton" type="button">
+            <span>Next surprise 💌</span>
+            <span aria-hidden="true">-></span>
+          </button>
+        </div>
+
+        <div class="wish-footer">
+          <span>With all my love, your sibling 🤍</span>
+          <button id="restartButton" type="button">Replay from start ✨</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="music-toggle hidden" id="musicToggle" type="button" aria-label="Pause background music">Music on</button>
+  <div class="toast hidden" id="toast">The surprise is opening...</div>
 
   <script src="script.js"></script>
 </body>

@@ -1,13 +1,16 @@
-# Birthday Reel Login Page
+# Bhavani Birthday Universe
 
-A simple HTML login page with an elegant dark theme, perfect for a cinematic sister birthday reel concept.
+A private birthday surprise page with a cinematic login reveal, animated star field, falling petals, looping background music, and a step-by-step birthday journey for Bhavani Akka.
 
 ## Files
 
-- `index.html` — login page markup
-- `styles.css` — page styling
-- `script.js` — login validation logic
+- `index.html` - page markup
+- `styles.css` - visual design and animations
+- `script.js` - login, canvas animation, music, confetti, and chapter navigation
 
 ## Run
 
-Open `index.html` in a browser.
+Open `index.html` in a browser. Login with:
+
+- Name: `Bhavani`
+- Passcode: `22/05`
